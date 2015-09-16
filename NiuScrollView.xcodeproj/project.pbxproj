@@ -14,6 +14,9 @@
 		EA1EB9361BA7B11C005D00FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA1EB9351BA7B11C005D00FD /* Images.xcassets */; };
 		EA1EB9391BA7B11C005D00FD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1EB9371BA7B11C005D00FD /* LaunchScreen.xib */; };
 		EA1EB9451BA7B11C005D00FD /* NiuScrollViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1EB9441BA7B11C005D00FD /* NiuScrollViewTests.m */; };
+		EA1EB9511BA7B162005D00FD /* NiuScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1EB9501BA7B162005D00FD /* NiuScrollView.m */; };
+		EA1EB9541BA7B193005D00FD /* NiuDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1EB9531BA7B193005D00FD /* NiuDataModel.m */; };
+		EA1EB9561BA7B1C2005D00FD /* NiuScrollView.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA1EB9551BA7B1C2005D00FD /* NiuScrollView.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,11 @@
 		EA1EB93E1BA7B11C005D00FD /* NiuScrollViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NiuScrollViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA1EB9431BA7B11C005D00FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA1EB9441BA7B11C005D00FD /* NiuScrollViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NiuScrollViewTests.m; sourceTree = "<group>"; };
+		EA1EB94F1BA7B162005D00FD /* NiuScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NiuScrollView.h; sourceTree = "<group>"; };
+		EA1EB9501BA7B162005D00FD /* NiuScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NiuScrollView.m; sourceTree = "<group>"; };
+		EA1EB9521BA7B193005D00FD /* NiuDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NiuDataModel.h; sourceTree = "<group>"; };
+		EA1EB9531BA7B193005D00FD /* NiuDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NiuDataModel.m; sourceTree = "<group>"; };
+		EA1EB9551BA7B1C2005D00FD /* NiuScrollView.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NiuScrollView.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 		EA1EB9271BA7B11B005D00FD /* NiuScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				EA1EB94E1BA7B12E005D00FD /* NiuScrollView */,
 				EA1EB92C1BA7B11B005D00FD /* AppDelegate.h */,
 				EA1EB92D1BA7B11B005D00FD /* AppDelegate.m */,
 				EA1EB92F1BA7B11B005D00FD /* ViewController.h */,
@@ -117,6 +126,18 @@
 				EA1EB9431BA7B11C005D00FD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA1EB94E1BA7B12E005D00FD /* NiuScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				EA1EB94F1BA7B162005D00FD /* NiuScrollView.h */,
+				EA1EB9501BA7B162005D00FD /* NiuScrollView.m */,
+				EA1EB9521BA7B193005D00FD /* NiuDataModel.h */,
+				EA1EB9531BA7B193005D00FD /* NiuDataModel.m */,
+				EA1EB9551BA7B1C2005D00FD /* NiuScrollView.plist */,
+			);
+			name = NiuScrollView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +223,7 @@
 				EA1EB9341BA7B11B005D00FD /* Main.storyboard in Resources */,
 				EA1EB9391BA7B11C005D00FD /* LaunchScreen.xib in Resources */,
 				EA1EB9361BA7B11C005D00FD /* Images.xcassets in Resources */,
+				EA1EB9561BA7B1C2005D00FD /* NiuScrollView.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +241,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA1EB9511BA7B162005D00FD /* NiuScrollView.m in Sources */,
 				EA1EB9311BA7B11B005D00FD /* ViewController.m in Sources */,
+				EA1EB9541BA7B193005D00FD /* NiuDataModel.m in Sources */,
 				EA1EB92E1BA7B11B005D00FD /* AppDelegate.m in Sources */,
 				EA1EB92B1BA7B11B005D00FD /* main.m in Sources */,
 			);
