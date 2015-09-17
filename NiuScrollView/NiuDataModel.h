@@ -15,6 +15,7 @@
 
 -(instancetype)initWithImageName;
 -(instancetype)initWithImageNameAndTitleArray;
+
 +(id)DataModelWithImageName;
 +(id)DataModelWithImageNameAndTitleArray;
 

@@ -14,7 +14,10 @@
 #define UISCREEN_HEIGHT self.view.bounds.size.height
 #define UISCREEN_WIDTH self.view.bounds.size.width
 
-@interface ViewController ()
+@interface ViewController (){
+    NSInteger _currentImageView;
+
+}
 
 @end
 
@@ -36,11 +39,26 @@
     
     [scrollView setTitleArray:dataModel.titleArray withShowStyle:TitleShowStyleLeft];
     
+    [scrollView addTapToScrollViewWithObject:self andSEL:@selector(TapSEL)];
+    
     scrollView.pageControl.pageIndicatorTintColor = [UIColor whiteColor];
     scrollView.pageControl.currentPageIndicatorTintColor = [UIColor redColor];
     [self.view addSubview:scrollView]; 
 }
 
+-(void)TapSEL{
+    NSString *imageArrayCountStr = [FuncPublic GetDefaultInfo:@"imageArrayCount"];
+    NSString *currentImageStr = [FuncPublic GetDefaultInfo:@"currentImage"];
+    NSInteger imageArrayCount = [imageArrayCountStr integerValue];
+    NSInteger currentImage = [currentImageStr integerValue];
+    
+    if (currentImage < 0) {
+        currentImage = imageArrayCount-1;
+    }
+    
+    NSLog(@"手势跳转%ld",(long)currentImage);
+
+}
 
 
 - (void)didReceiveMemoryWarning {

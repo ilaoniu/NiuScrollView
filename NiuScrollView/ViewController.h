@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FuncPublic.h"
 
 @interface ViewController : UIViewController
 

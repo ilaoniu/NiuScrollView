@@ -17,6 +17,7 @@
 		EA1EB9511BA7B162005D00FD /* NiuScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1EB9501BA7B162005D00FD /* NiuScrollView.m */; };
 		EA1EB9541BA7B193005D00FD /* NiuDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1EB9531BA7B193005D00FD /* NiuDataModel.m */; };
 		EA1EB9561BA7B1C2005D00FD /* NiuScrollView.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA1EB9551BA7B1C2005D00FD /* NiuScrollView.plist */; };
+		EA28E00C1BAA528C00E7368E /* FuncPublic.m in Sources */ = {isa = PBXBuildFile; fileRef = EA28E00B1BAA528C00E7368E /* FuncPublic.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		EA1EB9521BA7B193005D00FD /* NiuDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NiuDataModel.h; sourceTree = "<group>"; };
 		EA1EB9531BA7B193005D00FD /* NiuDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NiuDataModel.m; sourceTree = "<group>"; };
 		EA1EB9551BA7B1C2005D00FD /* NiuScrollView.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NiuScrollView.plist; sourceTree = "<group>"; };
+		EA28E00A1BAA528C00E7368E /* FuncPublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FuncPublic.h; sourceTree = "<group>"; };
+		EA28E00B1BAA528C00E7368E /* FuncPublic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FuncPublic.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 				EA1EB94E1BA7B12E005D00FD /* NiuScrollView */,
 				EA1EB92C1BA7B11B005D00FD /* AppDelegate.h */,
 				EA1EB92D1BA7B11B005D00FD /* AppDelegate.m */,
+				EA28E00A1BAA528C00E7368E /* FuncPublic.h */,
+				EA28E00B1BAA528C00E7368E /* FuncPublic.m */,
 				EA1EB92F1BA7B11B005D00FD /* ViewController.h */,
 				EA1EB9301BA7B11B005D00FD /* ViewController.m */,
 				EA1EB9321BA7B11B005D00FD /* Main.storyboard */,
@@ -241,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA28E00C1BAA528C00E7368E /* FuncPublic.m in Sources */,
 				EA1EB9511BA7B162005D00FD /* NiuScrollView.m in Sources */,
 				EA1EB9311BA7B11B005D00FD /* ViewController.m in Sources */,
 				EA1EB9541BA7B193005D00FD /* NiuDataModel.m in Sources */,
@@ -436,6 +442,7 @@
 				EA1EB94A1BA7B11C005D00FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA1EB94B1BA7B11C005D00FD /* Build configuration list for PBXNativeTarget "NiuScrollViewTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +451,7 @@
 				EA1EB94D1BA7B11C005D00FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

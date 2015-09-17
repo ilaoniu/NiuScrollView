@@ -7,12 +7,13 @@
 //
 
 #import "NiuScrollView.h"
+#import "FuncPublic.h"
 
 #define SCROLLVIEW_WIDTH self.bounds.size.width    //ScrollView的宽度
 #define SCROLLVIEW_HEIGHT self.bounds.size.height  //ScrollView的高度
 
 static CGFloat const changeImageTime = 4.0;
-static NSUInteger currentImage = 1; //记录中间图片的下标，开始总是1
+static NSInteger currentImage = 1; //记录中间图片的下标，开始总是1
 
 @implementation NiuScrollView{
     //图片文字label
@@ -59,11 +60,18 @@ static NSUInteger currentImage = 1; //记录中间图片的下标，开始总是
         
         _rightImageView = [[UIImageView alloc]initWithFrame:CGRectMake(SCROLLVIEW_WIDTH*2, 0, SCROLLVIEW_WIDTH, SCROLLVIEW_HEIGHT)];
         [self addSubview:_rightImageView];
-        
+       
         _moveTime = [NSTimer scheduledTimerWithTimeInterval:changeImageTime target:self selector:@selector(imageMove) userInfo:nil repeats:YES];
         _isTimeUp = NO;
     }
     return self;
+}
+
+#pragma mark - 给当前ImageView添加手势
+-(void)addTapToScrollViewWithObject:(id)object andSEL:(SEL)sel{
+    _centerImageView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:object action:sel];
+    [_centerImageView addGestureRecognizer:tap];
 }
 
 #pragma mark - 计时器到时，系统滚动图片
@@ -86,7 +94,6 @@ static NSUInteger currentImage = 1; //记录中间图片的下标，开始总是
     }
     
     _leftImageView.image = [UIImage imageNamed:_imageNameArray[(currentImage-1)%_imageNameArray.count]];
-    NSLog(@"%lu",currentImage);
     _leftLabel.text = _titleArray[(currentImage-1)%_imageNameArray.count];
     _centerImageView.image = [UIImage imageNamed:_imageNameArray[(currentImage)%_imageNameArray.count]];
     _centerLabel.text = _titleArray[(currentImage)%_imageNameArray.count];
@@ -94,6 +101,12 @@ static NSUInteger currentImage = 1; //记录中间图片的下标，开始总是
     _rightLabel.text = _titleArray[(currentImage+1)%_imageNameArray.count];
     
     self.contentOffset = CGPointMake(SCROLLVIEW_WIDTH, 0);
+    
+    NSString *imageArrayCountStr = [NSString stringWithFormat:@"%lu",_imageNameArray.count];
+    NSString *currentImageStr = [NSString stringWithFormat:@"%ld",currentImage-1];
+    
+    [FuncPublic SaveDefaultInfo:imageArrayCountStr andKey:@"imageArrayCount"];
+    [FuncPublic SaveDefaultInfo:currentImageStr andKey:@"currentImage"];
     
     //手动控制图片应该取消那个三秒的计时器
     if (!_isTimeUp) {

@@ -31,4 +31,6 @@ typedef NS_ENUM(NSUInteger, TitleShowStyle) {
 @property(nonatomic,assign)TitleShowStyle titleShowStyle;
 
 -(void)setTitleArray:(NSArray *)titleArray withShowStyle:(TitleShowStyle)titleShowStyle;
+-(void)addTapToScrollViewWithObject:(id)object andSEL:(SEL)sel;
+
 @end
