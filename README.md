@@ -8,11 +8,13 @@ NiuScrollView *scrollView = [[NiuScrollView alloc]initWithFrame:CGRectMake(0, 64
 
 NiuDataModel *dataModel = [[NiuDataModel alloc]initWithImageNameAndTitleArray];
 
-scrollView.imageNameArray = dataModel.imageNameArray;
+scrollView.imageNameArray = dataModel.imageNameArray;//设置图片（名字）
 
-scrollView.PageControlShowStyle = UIPageControlShowStyleRight;
+scrollView.PageControlShowStyle = UIPageControlShowStyleRight;//设置pageControl显示样式
 
-[scrollView setTitleArray:dataModel.titleArray withShowStyle:TitleShowStyleLeft];
+[scrollView setTitleArray:dataModel.titleArray withShowStyle:TitleShowStyleLeft];//设置标题以及显示样式
+
+[scrollView addTapToScrollViewWithObject:self andSEL:@selector(TapSEL)];//添加点击手势
 
 scrollView.pageControl.pageIndicatorTintColor = [UIColor whiteColor];
 
